@@ -13,10 +13,15 @@ ___
 
 generate OSSE initial conditions, observations, and background error covariance
 ==========================
+
+```
+cd Scale-dependent-Beta/
+mkdir prefixdata
+cd GenIC/
+```
   
 * configuration
 ```
-cd GenIC/
 vim L05_config.m
 ```
 
