@@ -27,3 +27,18 @@ data assimilation system
 * MSDA: Multi-scale DA
 * LETKF : Local ensemble transform kalman filter
 
+generate OSSE initial conditions, observations, and background error covariance
+==========================
+  
+% configuration
+L05_config.m
+
+% first step - spin up from a constant value then add a perturbation at the center of model
+L05_SpinUp.m
+
+% second step - generate Truth and observations
+L05_GenTruthObs.m
+
+% third step - generate background errors convariance
+L05_genB.m
+

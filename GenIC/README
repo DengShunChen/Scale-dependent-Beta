@@ -1,0 +1,13 @@
+## generate OSSE initial conditions (Truth, Background) and observations
+
+% configuration
+L05_config.m
+
+% first steps - spin up from a constant value then add a perturbation at the center of model
+L05_SpinUp.m
+
+% generate Truth and observations
+L05_GenTruthObs.m 
+
+## generate background errors convariance 
+L05_genB.m

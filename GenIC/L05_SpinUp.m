@@ -34,13 +34,13 @@ clear all;
      bckgd = L05_model_1(bckgd,prefix.model.main,prefix.model.timestep);
    end
 
-   figure(1);
-   subplot(2,1,1);
-   plot(truth,'K-')
-   hold on
-   plot(bckgd,'b-')
-   axis([-inf inf -30 30]);
-   hold off
+   %figure(1);
+   %subplot(2,1,1);
+   %plot(truth,'K-')
+   %hold on
+   %plot(bckgd,'b-')
+   %axis([-inf inf -30 30]);
+   %hold off
 
    for j=1:ensemblesize
 
@@ -52,14 +52,14 @@ clear all;
         ensemble(:,j) = L05_model_1(ensemble(:,j),prefix.model.ens,prefix.model.timestep);
       end
 
-     subplot(2,1,2);
-     plot(ensemble(:,j))
-     axis([-inf inf -30 30]);
-     hold on
+     %subplot(2,1,2);
+     %plot(ensemble(:,j))
+     %axis([-inf inf -30 30]);
+     %hold on
    end
 
-   drawnow
-   hold off
+   %drawnow
+   %hold off
  end
 
 % Saving files  

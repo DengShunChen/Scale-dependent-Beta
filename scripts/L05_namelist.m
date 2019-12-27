@@ -92,8 +92,10 @@
 %===============================================================================================%
 % End of general settings
 %===============================================================================================%
-
- datapath='/Users/dalab/Matlab_LorenzModel/prefixdata/'
+ cd ..;
+ localpath = pwd;
+ cd('scripts');
+ datapath=[ localpath '/prefixdata/'];
  if strcmp(prefix.da.type,'sdl') || strcmp(prefix.da.type,'msda')
   %file.input.B=[ datapath 'L05_climo_B_' num2str(prefix.model.main.I) '_MSDA.mat'];
    file.input.B=[ datapath 'L05_climo_B_' num2str(prefix.model.main.I) '_MSDA_new.mat'];
@@ -232,8 +234,8 @@ if strcmp(prefix.da.system,'3DVAR') || strcmp(prefix.da.system,'3DHYB')
     Bs_L.s = L05_genL(prefix.model.main.resolution,prefix.da.LR.s); 
     prefix.da.Bs.s=Bs_L.s*diag(BEV);
   else
-    wgt=mean(diag(B))/prefix.da.observation_error;
-    BEV=(diag(B)/wgt);
+    wgt=mean(diag(Bs))/prefix.da.observation_error;
+    BEV=(diag(Bs)/wgt);
     Bs_loc=15;
     Bs_L = L05_genL(prefix.model.main.resolution,Bs_loc);
     prefix.da.Bs=Bs_L*diag(BEV);

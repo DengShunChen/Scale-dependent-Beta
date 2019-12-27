@@ -5,12 +5,20 @@
 % configuration
  L05_config
 
+%prefix.model.maxtime         =10000;
+%observation_error            =2.;
+%observation_percent          =1/24;
+%file_truth                   ='data_all_truth_M03.txt';
+%file_obsdata                 ='data_all_obsdata_M03_limited.txt';
+%file_obsposi                 ='data_all_obsposi_M03_limited.txt';
+
  prefix.model.maxtime         =10000;
- observation_error            =2.;
- observation_percent          =1/24;
+ observation_error            =1.;
+ observation_percent          =1/8;
  file_truth                   ='data_all_truth_M03.txt';
- file_obsdata                 ='data_all_obsdata_M03_limited.txt';
- file_obsposi                 ='data_all_obsposi_M03_limited.txt';
+ file_obsdata                 ='data_all_obsdata_M03_basic.txt';
+ file_obsposi                 ='data_all_obsposi_M03_basic.txt';
+%
 %-----------------------------------------------------------------------------------%
 
 % Generating arrays
