@@ -27,7 +27,7 @@ L05_SpinUp.m
 
 * second step - generate Truth and observations
 ```
-matlab L05_GenTruthObs.m
+L05_GenTruthObs.m
 ```
 
 * third step - generate background errors convariance
